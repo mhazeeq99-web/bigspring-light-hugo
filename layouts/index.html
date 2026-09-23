@@ -25,7 +25,7 @@
 <!-- Features -->
 {{ with .Params.feature }}
 {{ if .enable }}
-<section class="section bg-light">
+<section id="features" class="section bg-light">
   <div class="container">
     <div class="text-center">
       <h2 class="mb-8">{{ .title | markdownify }}</h2>
@@ -104,6 +104,201 @@
 </section>
 {{ end }}
 {{ end }}
+
+<style>
+  .ptw-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  .ptw-step {
+    text-align: center;
+  }
+
+  .ptw-step-number {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    border-radius: 9999px;
+    background: #10a8a8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  @media (max-width: 1023px) {
+    .ptw-steps {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>
+
+<!-- How It Works -->
+<section id="how-it-works" class="section bg-light">
+  <div class="container">
+
+    <div class="text-center mb-12">
+      <h2 class="mb-4">How Digital Permit to Work Works</h2>
+      <p class="mx-auto max-w-2xl">
+        Manage the permit lifecycle from work request to completion through a structured digital workflow.
+      </p>
+    </div>
+
+    <div class="ptw-steps">
+
+      <div class="ptw-step">
+        <div class="ptw-step-number">
+          01
+        </div>
+        <h3 class="h5 mb-3">Create</h3>
+        <p>Create a permit and define the work activity, location and requirements.</p>
+      </div>
+
+      <div class="ptw-step">
+        <div class="ptw-step-number">
+          02
+        </div>
+        <h3 class="h5 mb-3">Review</h3>
+        <p>Review work details, safety requirements and JHA/HIRARC documentation.</p>
+      </div>
+
+      <div class="ptw-step">
+        <div class="ptw-step-number">
+          03
+        </div>
+        <h3 class="h5 mb-3">Approve</h3>
+        <p>Route the permit through the required approval workflow before work begins.</p>
+      </div>
+
+      <div class="ptw-step">
+        <div class="ptw-step-number">
+          04
+        </div>
+        <h3 class="h5 mb-3">Issue</h3>
+        <p>Issue the permit once the required checks and approvals are completed.</p>
+      </div>
+
+      <div class="ptw-step">
+        <div class="ptw-step-number">
+          05
+        </div>
+        <h3 class="h5 mb-3">Close</h3>
+        <p>Close completed work and retain the permit record for traceability.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="section">
+  <div class="container">
+
+    <div class="text-center mb-12">
+      <h2 class="mb-4">Simple, Transparent Pricing for Digital PTW</h2>
+      <p class="mx-auto max-w-2xl">
+        Start with the core Permit to Work workflow. Upgrade when your operation needs more capacity and supporting evidence.
+      </p>
+    </div>
+
+    <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+
+      <!-- Free -->
+      <div class="rounded-xl border border-border bg-white p-8 shadow-sm">
+
+        <h3 class="mb-2">Free</h3>
+
+        <p class="mb-6">
+          Start digitising your PTW process.
+        </p>
+
+        <div class="mb-1">
+          <span class="text-4xl font-bold">MYR 0</span>
+          <span class="text-text-light">/month</span>
+        </div>
+
+        <p class="mb-8 text-sm">Free forever</p>
+
+        <ul class="mb-8 space-y-3">
+          <li>✓ Core PTW workflow</li>
+          <li>✓ JHA / JSA</li>
+          <li>✓ LOTO</li>
+          <li>✓ Gas Testing</li>
+          <li>✓ Safety Controls</li>
+          <li>✓ Basic Dashboard</li>
+          <li>✓ Basic Reports</li>
+          <li>✓ Basic Notifications</li>
+          <li>✓ Printable Permit</li>
+          <li>✓ Contractor PTW</li>
+        </ul>
+
+        <a
+          href="https://app.eptw.com.my"
+          class="btn btn-outline-primary w-full text-center">
+          Get Started
+        </a>
+
+      </div>
+
+      <!-- Pro -->
+      <div class="rounded-xl border-2 border-primary bg-white p-8 shadow-lg">
+
+        <div class="mb-4 inline-block rounded-full bg-primary px-4 py-1 text-sm font-semibold text-white">
+          Recommended
+        </div>
+
+        <h3 class="mb-2">Pro</h3>
+
+        <p class="mb-6">
+          Complete digital PTW management.
+        </p>
+
+        <div class="mb-1">
+          <span class="text-4xl font-bold">MYR 149</span>
+          <span class="text-text-light">/month</span>
+        </div>
+
+        <p class="mb-1">or MYR 1,490 /year</p>
+
+        <p class="mb-8 font-semibold text-primary">
+          Save RM298/year
+        </p>
+
+        <p class="mb-4 font-semibold">
+          Everything in Free, plus:
+        </p>
+
+        <ul class="mb-8 space-y-3">
+          <li>✓ Photos & document attachments</li>
+          <li>✓ More storage</li>
+          <li>✓ More sites</li>
+          <li>✓ Higher PTW limits</li>
+          <li>✓ Longer history retention</li>
+        </ul>
+
+        <a
+          href="https://app.eptw.com.my"
+          class="btn btn-primary w-full text-center">
+          Start Pro
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <p class="text-sm">
+        No credit card required · Free forever · Upgrade anytime
+      </p>
+    </div>
+
+  </div>
+</section>
 
 <!-- Call to Action -->
 {{ with .Params.call_to_action }}
